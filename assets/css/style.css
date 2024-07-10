@@ -188,7 +188,7 @@ span {
     align-items: center;
     gap: 2rem;
     background: rgb(30, 29, 48);
-    height: 100%;
+    
 }
 
 .sobre-img img {
@@ -300,11 +300,9 @@ span {
 /* Estilo da página Projetos */
 
 
-/* Estilo da página Contato (FIM NA 356) */
+/* Estilo da página Contato (FIM NA 354) */
 .contato {
     margin-bottom: 90px;
-    height: 100%;
-    padding: 215px;
 }
 
 .contato h2 {
