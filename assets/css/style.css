@@ -1,0 +1,555 @@
+:root {
+    --text-color: #fff;
+    --bg-color: #11101b;
+    --segundo-text-color: rgb(30, 29, 48);
+    --main-color: #9531bd;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+/* Estilo da nav  (FIM NA 89) */
+header {
+    width: 100%;
+    height: 80px;
+    background: #11101b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.nav {
+    z-index: 10;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefefe;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.header {
+    position: fixed;
+    z-index: 10;
+}
+
+.header.borda {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.nav ul li a {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin: 0 5px;
+}
+
+.nav ul li a:hover {
+    color: #11101b;
+    background: #fefefe;
+}
+
+.nav ul li a.ativo {
+    color: #11101b;
+    background: #fefefe;
+}
+/* Estilo da nav */
+
+/* Estilo da página Home (FIM NA 164) */
+section {
+    min-height: 50vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.conteudo-home h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.conteudo-home h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.conteudo-home h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img img {
+    width: 40vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.conteudo-home p {
+    font-size: 1.6rem;
+}
+
+.redes-sociais a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.redes-sociais a:hover {
+    background: var(--main-color);
+    color: white;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+/* Estilo da página Home */
+
+
+/* Estilo da página Sobre mim (FIM NA 218) */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: rgb(30, 29, 48);
+    height: 100%;
+}
+
+.sobre-img img {
+    width: 38vw;
+}
+
+.cab {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.sobre-mim h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.sobre-mim h3 {
+    font-size: 2.6rem;
+}
+
+.sobre-mim p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+/* Estilo da página Sobre mim */
+
+
+/* Estilo da página Projetos (FIM NA 302) */
+.projetos {
+    margin-top: 70px;
+    background: var(--segundo-text-color);
+}
+
+.projetos h2 {
+    margin-bottom: 4rem;
+}
+
+.projeto-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.projeto-container .projeto-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.projeto-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.projeto-box:hover img {
+    transform: scale(1.1);
+}
+
+.projeto-box .projeto-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.projeto-box:hover .projeto-layer {
+    transform: translateY(0);
+}
+
+.projeto-layer h4 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.projeto-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.projeto-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    margin-top: 40px;
+}
+
+.projeto-layer a i {
+    font-size: 2rem;
+    color: var(--segundo-text-color);
+}
+/* Estilo da página Projetos */
+
+
+/* Estilo da página Contato (FIM NA 356) */
+.contato {
+    margin-bottom: 90px;
+    height: 100%;
+    padding: 215px;
+}
+
+.contato h2 {
+    margin-bottom: 3rem;
+}
+
+.contato form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contato form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contato form .input-box input, .contato form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--segundo-text-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contato form .input-box input {
+    width: 49%;
+}
+
+.contato form textarea {
+    resize: none;
+}
+
+.contato form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.contato form #botao:disabled {
+    background: var(--segundo-text-color);
+    cursor: not-allowed;
+    border-color: none;
+    box-shadow: none;
+}
+/* Estilo da página Contato */
+
+
+/* Estilo do Rodapé (FIM NA 391) */
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--segundo-text-color);
+}
+
+.texto-rodape p {
+    font-size: 1.6rem;
+}
+
+.icone-rodape a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background-color: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.icone-rodape a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.icone-rodape a i {
+    font-size: 2.4rem;
+    color: var(--segundo-text-color);
+}
+/* Estilo do Rodapé */
+
+
+
+/* RESPONSIVIDADES */
+
+/* Responsividade geral do site */
+@media (max-width: 1200px){
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .habilidades {
+        padding-bottom: 7rem;
+    }
+
+    .contato {
+        min-height: auto;
+    }
+
+    .rodape {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px){
+    .container{             /* Responsividade dos cards da página habilidades */
+        padding: 20px;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .conteudo-home h3 {
+        font-size: 2.6rem;
+    }
+
+    .conteudo-home h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .sobre-mim {
+        flex-direction: column-reverse;
+    }
+
+    .sobre-mim img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .habilidades h2 {
+        margin-bottom: 3rem;
+    }
+
+    .projeto-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 617px) {
+    .projeto-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contato form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img, .sobre-img img {
+        width: 90vw;
+    }
+
+    .rodape {
+        flex-direction: column-reverse;
+    }
+
+    .rodape p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+/* Responsividade geral do site */
+
+/* Responsividade da nav */
+@media only screen and (max-width: 1300px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .menu-mobile {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-mobile .linha {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+
+    .nav {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #11101b;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav.ativo {
+        height: 400px;
+    }
+
+    .nav ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav.ativo ul {
+        opacity: 1;
+    }
+
+    .nav ul li a {
+        margin-bottom: 12px;
+    }
+}
+/* Responsividade da nav */
+
+/* RESPONSIVIDADES */
