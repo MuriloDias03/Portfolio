@@ -415,13 +415,13 @@ span {
     .rodape {
         padding: 2rem 3%;
     }
+
+    .projetos {
+        padding-bottom: 7rem;
+    }
 }
 
 @media (max-width: 768px){
-    .container{             /* Responsividade dos cards da página habilidades */
-        padding: 20px;
-    }
-
     .home {
         flex-direction: column;
     }
@@ -448,7 +448,7 @@ span {
         margin-top: 4rem;
     }
 
-    .habilidades h2 {
+    .projetos h2 {
         margin-bottom: 3rem;
     }
 
@@ -458,7 +458,7 @@ span {
 }
 
 @media (max-width: 617px) {
-    .projeto-container{
+    .projeto-container {
         grid-template-columns: 1fr;
     }
 }
